@@ -1,3 +1,6 @@
+import java.util.*;
+import bank;
+
 class Shape {
     public void area() {
     System.out.println("displays area");
@@ -17,9 +20,10 @@ class Circle extends Shape {
         System.out.println((3.14)*r*r);
     }
 }
-//Inheritance  
+//Packages
 public class OOPS {
     public static void main (String[] args) {
-
+        bank.Account account1 = new bank.Account();
+        account1.name = "customer1";
     }
 }
