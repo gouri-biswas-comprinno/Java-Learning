@@ -1,20 +1,13 @@
-interface Animal {
-    public void walk();
-}
-
-interface Herbivore {
-
-}
-
-class Horse implements Animal , Herbivore{
-    public void walk() {
-        System.out.println("walks on 4 legs");
-    }
+class Student {
+    String name;
+    static String school;
 }
 public class OOPS {
     public static void main (String[] args) {
-        Horse horse = new Horse();
-        horse.walk();
+        Student.school = "JMV";
+        Student student1 = new Student();
+        student1.name = "tony";
+        System.out.println(student1.school);
 
     }
 }
