@@ -15,23 +15,34 @@ class Pen {
     }
 }
 
+class Student {
+    String name;
+    int age;
+
+    public void printInfo() {
+        System.out.println(this.name);
+        System.out.println(this.age);
+    }
+
+    Student() {
+        System.out.println("Constructor called");   
+    }
+    
+    Student(String name, int age) {
+        this.name = name;  
+        //this.age is obj ki age and = age is the one passed as paramater
+        this.age = age;
+        System.out.println("Parameterized Constructor called");
+    }
+}
+
 public class OOPS {
     public static void main (String[] args) {
-        //type will be class name and pen1 will be object name
-        //Pen() is constructor
-        // creating an object of Pen class
-        Pen pen1 = new Pen();
-        // setting values to the properties of pen1 object using a dot
-        pen1.color = "blue";
-        pen1.type = "ballpoint";
-        // calling the write method of pen1 object
-        pen1.write();
-
-        Pen pen2 = new Pen();
-        pen2.color = "black";
-        pen2.type = "gel";
-
-        pen1.printColor();
-        pen2.printColor();
+        //new keyword, memory heap create a space where object will be stored
+        //Student is a constructor, it will create a new object of Student class
+       Student s1 = new Student("Gouri",23);
+    //    s1.name = "Gouri Biswas";
+    //    s1.age = 23;
+       s1.printInfo();
     }
 }
