@@ -15,23 +15,24 @@ class Pen {
     }
 }
 
+//This is also an example of compile time polymorphism , where if there is any error it will give error in code
+//As in is Polymorphism implemented properly
 class Student {
     String name;
     int age;
 
-    public void printInfo() {
+    //Function Overloading
+
+    public void printInfo(String name) {
         System.out.println(this.name);
-        System.out.println(this.age);
     }
 
-    //Copy Constructor
-    Student(Student s2) {
-        this.name = s2.name;
-        this.age = s2.age;
+    public void printInfo(int age) {
+         System.out.println(this.age);
     }
 
-    Student() {
-       
+    public void printInfo(String name , int age) {
+        System.out.println(name + " " + age);
     }
 
 }
@@ -43,7 +44,6 @@ public class OOPS {
         s1.name = "gouri";
         s1.age = 23;
 
-        Student s2 = new Student(s1);
-        s2.printInfo();
+        s1.printInfo(s1.name , s1.age);
     }
 }
