@@ -24,25 +24,26 @@ class Student {
         System.out.println(this.age);
     }
 
+    //Copy Constructor
+    Student(Student s2) {
+        this.name = s2.name;
+        this.age = s2.age;
+    }
+
     Student() {
-        System.out.println("Constructor called");   
+       
     }
-    
-    Student(String name, int age) {
-        this.name = name;  
-        //this.age is obj ki age and = age is the one passed as paramater
-        this.age = age;
-        System.out.println("Parameterized Constructor called");
-    }
+
 }
 
 public class OOPS {
     public static void main (String[] args) {
-        //new keyword, memory heap create a space where object will be stored
-        //Student is a constructor, it will create a new object of Student class
-       Student s1 = new Student("Gouri",23);
-    //    s1.name = "Gouri Biswas";
-    //    s1.age = 23;
-       s1.printInfo();
+
+        Student s1 = new Student();
+        s1.name = "gouri";
+        s1.age = 23;
+
+        Student s2 = new Student(s1);
+        s2.printInfo();
     }
 }
