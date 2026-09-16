@@ -27,5 +27,11 @@ public class OOPS {
         // calling the write method of pen1 object
         pen1.write();
 
+        Pen pen2 = new Pen();
+        pen2.color = "black";
+        pen2.type = "gel";
+
+        pen1.printColor();
+        pen2.printColor();
     }
 }
