@@ -1,29 +1,27 @@
-import java.util.*;
-import bank;
+//Just a concept a blueprint , cannot be created actually
+abstract class Animal {
+    abstract void walk();
+}
 
-class Shape {
-    public void area() {
-    System.out.println("displays area");
+class Horse extends Animal {
+    public void walk() {
+        System.out.println("Walks on 4 Legs");
     }
 }
 
-class Triangle extends Shape {
-    public void area(int l, int h) {
-        System.out.println(1/2*l*h);
+class Chicken extends Animal {
+    public void walk() {
+        System.out.println("Walks on 2 Legs");
     }
 }
 
-
-
-class Circle extends Shape {
-    public void area(int r) {
-        System.out.println((3.14)*r*r);
-    }
-}
-//Packages
 public class OOPS {
     public static void main (String[] args) {
-        bank.Account account1 = new bank.Account();
-        account1.name = "customer1";
+        Horse horse = new Horse();
+        horse.walk();
+
+        //Runtime error - kyuki wo abstract h
+        Animal animal = new Animal();
+        animal.walk();
     }
 }
