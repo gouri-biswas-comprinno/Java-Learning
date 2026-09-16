@@ -1,6 +1,10 @@
 //Just a concept a blueprint , cannot be created actually
 abstract class Animal {
     abstract void walk();
+    //can have non-abstract method 
+    public void eat() {
+        System.out.println("Animal eats");
+    }
 }
 
 class Horse extends Animal {
@@ -19,9 +23,7 @@ public class OOPS {
     public static void main (String[] args) {
         Horse horse = new Horse();
         horse.walk();
+        horse.eat();
 
-        //Runtime error - kyuki wo abstract h
-        Animal animal = new Animal();
-        animal.walk();
     }
 }
